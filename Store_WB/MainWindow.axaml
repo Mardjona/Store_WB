@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Store_WB.MainWindow"
+        Title="Store_WB"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent">
+  
+    <Window.Styles>
+        <Style Selector="TextBox">
+            <Setter Property="Foreground" Value="Black"> </Setter>
+        </Style>
+    </Window.Styles>
+    <StackPanel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.65" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+        <StackPanel 
+            Orientation="Horizontal" 
+            Background="BlueViolet"
+            Height="70">
+            <TextBlock
+                Margin="10 0 0 0"
+                VerticalAlignment="Center"
+                FontSize="30"
+                Foreground="Azure"
+                Text="Wildberries">
+            </TextBlock>
+            <Grid
+                ColumnDefinitions="350,40">
+                <TextBox
+                    Background="Azure"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    VerticalContentAlignment="Center"
+                    Margin="40 0 0 0"
+                    VerticalAlignment="Center"
+                    Foreground="Black"
+                    Watermark="Найти на Wildberries"
+                    Height="40"
+                    Width="350">
+                </TextBox>
+                <Button
+                    Background="rgba(0,0,0,0)"
+                    Grid.Column="1">
+                    <Image
+                        Height="20"
+                        Width="20"
+                        Source="Assets/search.png">
+                        
+                    </Image>
+                </Button>
+            </Grid>
+        </StackPanel>
+    </StackPanel> 
+</Window>
